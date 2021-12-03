@@ -2,9 +2,10 @@
 function install_http() {
   yum install -y squid #安装http代理
   cat <<EOF >/etc/squid/squid.conf
-#
-# Recommended minimum configuration:
-#
+
+
+
+
 
 
 # Example rule allowing access from your local networks.
