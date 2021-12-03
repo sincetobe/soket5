@@ -1,6 +1,7 @@
+set +o posix
 #!/bin/bash
 function install_http() {
-  yum install -y squid #°²×°http´úÀí
+  yum install -y squid #å®‰è£…httpä»£ç†
   cat <<EOF >/etc/squid/squid.conf
 #
 # Recommended minimum configuration:
@@ -84,9 +85,9 @@ refresh_pattern ^gopher:	1440	0%	1440
 refresh_pattern -i (/cgi-bin/|\?) 0	0%	0
 refresh_pattern .		0	20%	4320
 EOF
-  systemctl start squid          #¿ªÆôsquid
-  systemctl restart squid          #¿ªÆôsquid
-  systemctl enable squid.service #ÉèÖÃ¿ª»ú×Ô¶¯Æô¶¯
+  systemctl start squid          #å¼€å¯squid
+  systemctl restart squid          #å¼€å¯squid
+  systemctl enable squid.service #è®¾ç½®å¼€æœºè‡ªåŠ¨å¯åŠ¨
 }
 function install_socks5() {
   wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install_proxy.sh
