@@ -2,11 +2,12 @@
 function install_http() {
   yum install -y squid #安装http代理
   cat <<EOF >/etc/squid/squid.conf
-
-
-
-
-
+#
+# Recommended minimum configuration:
+#
+acl manager proto cache_object
+acl localhost src 127.0.0.1/32 ::1
+acl to_localhost dst 127.0.0.0/8 0.0.0.0/32 ::1
 
 # Example rule allowing access from your local networks.
 # Adapt to list your (internal) IP networks from where browsing
