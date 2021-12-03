@@ -456,7 +456,6 @@ def check_os_support():
 
 def stop(pid_file):
     check_os_support()
-    print('Stopping server...', end=' ')
     try:
         f = open(pid_file, 'r')
         pid = int(f.readline())
