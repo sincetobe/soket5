@@ -1,11 +1,5 @@
 #!/bin/bash
 function install_http() {
-  yum install -y squid #安装http代理
-  
-  
-  
-  
-  
 acl manager proto cache_object
 acl localhost src 127.0.0.1/32 ::1
 acl to_localhost dst 127.0.0.0/8 0.0.0.0/32 ::1
