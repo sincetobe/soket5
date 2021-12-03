@@ -1,4 +1,3 @@
-set +o posix
 #!/bin/bash
 function install_http() {
 # We strongly recommend the following be uncommented to protect innocent
